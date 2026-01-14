@@ -72,16 +72,16 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-32 bg-card">
+      <section className="py-20 md:py-32 bg-card">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center animate-slide-up">
-            <p className="text-primary font-semibold uppercase tracking-widest mb-4">
+            <p className="text-primary font-semibold uppercase tracking-wider md:tracking-widest mb-3 md:mb-4 text-sm md:text-base">
               Contact Us
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
               Get In <span className="text-gold">Touch</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Have questions? We'd love to hear from you. Send us a message and
               we'll respond as soon as possible.
             </p>
@@ -90,20 +90,20 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-16">
+      <section className="py-10 md:py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className="p-6 bg-card border border-border rounded-lg text-center card-hover"
+                className="p-3 md:p-6 bg-card border border-border rounded-lg text-center card-hover"
               >
-                <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary/10">
-                  <info.icon className="w-7 h-7 text-primary" />
+                <div className="w-10 h-10 md:w-14 md:h-14 mx-auto mb-2 md:mb-4 flex items-center justify-center rounded-full bg-primary/10">
+                  <info.icon className="w-5 h-5 md:w-7 md:h-7 text-primary" />
                 </div>
-                <h3 className="font-bold text-foreground mb-3">{info.title}</h3>
+                <h3 className="font-bold text-foreground mb-2 md:mb-3 text-sm md:text-base">{info.title}</h3>
                 {info.details.map((detail, i) => (
-                  <p key={i} className="text-muted-foreground text-sm">
+                  <p key={i} className="text-muted-foreground text-xs md:text-sm">
                     {detail}
                   </p>
                 ))}
@@ -114,50 +114,50 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="section-padding bg-card">
+      <section className="py-12 md:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
             <div>
               <SectionHeading
                 title="Send Us a Message"
                 subtitle="Fill out the form below and our team will get back to you within 24 hours."
               />
-              <div className="mt-8 space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
-                    <span className="text-primary font-bold">1</span>
+              <div className="mt-6 md:mt-8 space-y-4 md:space-y-6">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
+                    <span className="text-primary font-bold text-sm md:text-base">1</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">
+                    <h4 className="font-bold text-foreground mb-1 text-sm md:text-base">
                       Product Inquiries
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs md:text-sm">
                       Get quotes for tyres, lubricants, batteries, and more.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
-                    <span className="text-primary font-bold">2</span>
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
+                    <span className="text-primary font-bold text-sm md:text-base">2</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">
+                    <h4 className="font-bold text-foreground mb-1 text-sm md:text-base">
                       Service Appointments
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs md:text-sm">
                       Schedule tyre services, alignment, or retreading.
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
-                    <span className="text-primary font-bold">3</span>
+                <div className="flex items-start gap-3 md:gap-4">
+                  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full bg-primary/10 flex-shrink-0">
+                    <span className="text-primary font-bold text-sm md:text-base">3</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-foreground mb-1">
+                    <h4 className="font-bold text-foreground mb-1 text-sm md:text-base">
                       Dealer Partnerships
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs md:text-sm">
                       Become a partner dealer in our distribution network.
                     </p>
                   </div>
@@ -165,13 +165,13 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-background p-8 rounded-lg border border-border">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
+            <div className="bg-background p-4 md:p-8 rounded-lg border border-border">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-3 md:gap-4">
+                  <div className="space-y-1 md:space-y-2">
                     <label
                       htmlFor="name"
-                      className="text-sm font-medium text-foreground"
+                      className="text-xs md:text-sm font-medium text-foreground"
                     >
                       Full Name *
                     </label>
@@ -182,13 +182,13 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="John Doe"
-                      className="bg-card border-border"
+                      className="bg-card border-border text-sm md:text-base"
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1 md:space-y-2">
                     <label
                       htmlFor="email"
-                      className="text-sm font-medium text-foreground"
+                      className="text-xs md:text-sm font-medium text-foreground"
                     >
                       Email Address *
                     </label>
@@ -200,16 +200,16 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="john@example.com"
-                      className="bg-card border-border"
+                      className="bg-card border-border text-sm md:text-base"
                     />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
+                <div className="grid sm:grid-cols-2 gap-3 md:gap-4">
+                  <div className="space-y-1 md:space-y-2">
                     <label
                       htmlFor="phone"
-                      className="text-sm font-medium text-foreground"
+                      className="text-xs md:text-sm font-medium text-foreground"
                     >
                       Phone Number
                     </label>
@@ -219,13 +219,13 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="+973 XXXX XXXX"
-                      className="bg-card border-border"
+                      className="bg-card border-border text-sm md:text-base"
                     />
                   </div>
-                  <div className="space-y-2">
+                  <div className="space-y-1 md:space-y-2">
                     <label
                       htmlFor="subject"
-                      className="text-sm font-medium text-foreground"
+                      className="text-xs md:text-sm font-medium text-foreground"
                     >
                       Subject *
                     </label>
@@ -236,15 +236,15 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       placeholder="Product Inquiry"
-                      className="bg-card border-border"
+                      className="bg-card border-border text-sm md:text-base"
                     />
                   </div>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-1 md:space-y-2">
                   <label
                     htmlFor="message"
-                    className="text-sm font-medium text-foreground"
+                    className="text-xs md:text-sm font-medium text-foreground"
                   >
                     Message *
                   </label>
@@ -256,14 +256,14 @@ const Contact = () => {
                     required
                     placeholder="Tell us about your requirements..."
                     rows={5}
-                    className="bg-card border-border resize-none"
+                    className="bg-card border-border resize-none text-sm md:text-base"
                   />
                 </div>
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-hero"
+                  className="w-full btn-hero text-sm md:text-base"
                 >
                   {isSubmitting ? (
                     "Sending..."
@@ -281,14 +281,14 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-96 bg-secondary">
-        <div className="w-full h-full flex items-center justify-center">
+      <section className="h-64 md:h-96 bg-secondary">
+        <div className="w-full h-full flex items-center justify-center px-4">
           <div className="text-center">
-            <MapPin className="w-16 h-16 text-primary mx-auto mb-4" />
-            <h3 className="text-2xl font-bold text-foreground mb-2">
+            <MapPin className="w-10 h-10 md:w-16 md:h-16 text-primary mx-auto mb-2 md:mb-4" />
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1 md:mb-2">
               Kingdom of Bahrain
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground">
               Multiple locations across Bahrain
             </p>
           </div>

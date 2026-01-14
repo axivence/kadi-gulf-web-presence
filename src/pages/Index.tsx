@@ -66,7 +66,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center py-20 md:py-0">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -74,23 +74,23 @@ const Index = () => {
         <div className="absolute inset-0 overlay-dark" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl animate-slide-up">
-            <p className="text-primary font-semibold uppercase tracking-widest mb-4">
+            <p className="text-primary font-semibold uppercase tracking-wider md:tracking-widest mb-3 md:mb-4 text-sm md:text-base">
               Since 1959
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-foreground mb-4 md:mb-6 leading-tight">
               Premium Automotive
               <span className="block text-gold">Solutions in Bahrain</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-xl">
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8 max-w-xl">
               One of the leading dealers and distributors of premium tyres,
               lubricants, and automotive products in the Kingdom of Bahrain.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/products" className="btn-hero">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <Link to="/products" className="btn-hero text-center justify-center">
                 Explore Products
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link to="/contact" className="btn-hero-outline">
+              <Link to="/contact" className="btn-hero-outline text-center justify-center">
                 Contact Us
               </Link>
             </div>
@@ -99,19 +99,19 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="section-padding bg-card">
+      <section className="py-12 md:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="text-center p-8 border border-border rounded-lg card-hover bg-background"
+                className="text-center p-4 md:p-8 border border-border rounded-lg card-hover bg-background"
               >
-                <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full bg-primary/10">
-                  <feature.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-6 flex items-center justify-center rounded-full bg-primary/10">
+                  <feature.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
+                <h3 className="text-sm md:text-xl font-bold mb-2 md:mb-3">{feature.title}</h3>
+                <p className="text-xs md:text-base text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -119,31 +119,31 @@ const Index = () => {
       </section>
 
       {/* About Preview */}
-      <section className="section-padding">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="animate-slide-up">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="animate-slide-up order-2 lg:order-1">
               <SectionHeading
                 title="About KADI International"
                 subtitle="A legacy of excellence in the automotive industry spanning over six decades."
               />
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6 leading-relaxed">
                 KADI International Group is a division of Bahrain Tyres Factory
                 (BATREP), which was established in the year 1959. We are the sole
                 dealer of premium quality international tyre brands in the Kingdom
                 of Bahrain.
               </p>
-              <p className="text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-sm md:text-base text-muted-foreground mb-6 md:mb-8 leading-relaxed">
                 Our success is based on an in-depth understanding of our
                 customer's needs and the dedication of our skilled workforce.
               </p>
-              <Link to="/about" className="btn-hero-outline">
+              <Link to="/about" className="btn-hero-outline inline-flex">
                 Learn More About Us
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full border-2 border-primary/30 rounded-lg" />
+            <div className="relative order-1 lg:order-2">
+              <div className="absolute -top-2 -left-2 md:-top-4 md:-left-4 w-full h-full border-2 border-primary/30 rounded-lg" />
               <img
                 src={tyresProduct}
                 alt="Premium Tyres"
@@ -155,14 +155,14 @@ const Index = () => {
       </section>
 
       {/* Products Preview */}
-      <section className="section-padding bg-card">
+      <section className="py-12 md:py-20 bg-card">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Our Products & Services"
             subtitle="Comprehensive range of automotive products and professional services"
             centered
           />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
             {products.map((product, index) => (
               <Link
                 key={index}
@@ -177,12 +177,12 @@ const Index = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-80" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-foreground">
+                <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6">
+                  <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2 text-foreground">
                     {product.title}
                   </h3>
-                  <p className="text-muted-foreground">{product.description}</p>
-                  <span className="inline-flex items-center gap-2 mt-4 text-primary font-semibold group-hover:gap-3 transition-all">
+                  <p className="text-sm md:text-base text-muted-foreground">{product.description}</p>
+                  <span className="inline-flex items-center gap-2 mt-2 md:mt-4 text-primary font-semibold group-hover:gap-3 transition-all text-sm md:text-base">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </span>
                 </div>
@@ -193,20 +193,20 @@ const Index = () => {
       </section>
 
       {/* Brands Section */}
-      <section className="section-padding">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Our Partner Brands"
             subtitle="We proudly partner with premium international tyre manufacturers"
             centered
           />
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mt-8 md:mt-12">
             {brands.map((brand, index) => (
               <div
                 key={index}
-                className="p-8 bg-card border border-border rounded-lg text-center card-hover"
+                className="p-4 md:p-8 bg-card border border-border rounded-lg text-center card-hover"
               >
-                <span className="text-xl font-bold text-foreground">{brand}</span>
+                <span className="text-sm md:text-xl font-bold text-foreground">{brand}</span>
               </div>
             ))}
           </div>
@@ -214,18 +214,18 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary">
+      <section className="py-12 md:py-20 bg-primary">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4 md:mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-primary-foreground/80 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-primary-foreground/80 text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
             Contact us today to discuss your automotive product needs. We're here
             to help you find the perfect solution.
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-background text-foreground font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-background text-foreground font-semibold uppercase tracking-wider hover:bg-foreground hover:text-background transition-all text-sm md:text-base"
           >
             Contact Us Today
             <ArrowRight className="w-4 h-4" />
