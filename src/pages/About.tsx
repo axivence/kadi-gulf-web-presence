@@ -42,7 +42,7 @@ const About = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-32">
+      <section className="relative py-20 md:py-32">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${aboutHero})` }}
@@ -50,13 +50,13 @@ const About = () => {
         <div className="absolute inset-0 overlay-full" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center animate-slide-up">
-            <p className="text-primary font-semibold uppercase tracking-widest mb-4">
+            <p className="text-primary font-semibold uppercase tracking-wider md:tracking-widest mb-3 md:mb-4 text-sm md:text-base">
               About Us
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 md:mb-6">
               Our <span className="text-gold">Story</span>
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               A legacy of excellence in the automotive industry spanning over six
               decades.
             </p>
@@ -65,7 +65,7 @@ const About = () => {
       </section>
 
       {/* Introduction */}
-      <section className="section-padding">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <SectionHeading
@@ -74,19 +74,19 @@ const About = () => {
               centered
             />
             <div className="prose prose-lg mx-auto text-center">
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                 It gives us immense pleasure to introduce to you KADI International
                 Group - one of the leading, established dealers and distributors of
                 automotive products in the Kingdom of Bahrain.
               </p>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 md:mb-6">
                 M/s KADI International Trading is a Division of Bahrain Tyres
                 Factory (BATREP), which was established in the year 1959. BATREP
                 has since continued to serve many leading establishments with tyre
                 re-treading for the past 64 years - with the latest cutting-edge
                 technology and advanced processes in the Kingdom of Bahrain.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                 KADI International Group is the sole dealer of premium quality and
                 trusted international tyre brands such as Marshal from Korea,
                 Landsail from Thailand, Sonar from Taiwan, Jinyu, Wanli, Blackhawk,
@@ -99,15 +99,15 @@ const About = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-card border-y border-border">
+      <section className="py-10 md:py-16 bg-card border-y border-border">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-gold mb-2">
+                <div className="text-3xl md:text-5xl font-bold text-gold mb-1 md:mb-2">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-xs md:text-base text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -115,26 +115,26 @@ const About = () => {
       </section>
 
       {/* Our Divisions */}
-      <section className="section-padding">
+      <section className="py-12 md:py-20">
         <div className="container mx-auto px-4">
           <SectionHeading
             title="Our Divisions"
             subtitle="Three specialized divisions working together to serve all your automotive needs"
             centered
           />
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-8 md:mt-12">
             {divisions.map((division, index) => (
               <div
                 key={index}
-                className="p-8 bg-card border border-border rounded-lg card-hover"
+                className="p-4 md:p-8 bg-card border border-border rounded-lg card-hover"
               >
-                <div className="w-16 h-16 mb-6 flex items-center justify-center rounded-full bg-primary/10">
-                  <division.icon className="w-8 h-8 text-primary" />
+                <div className="w-12 h-12 md:w-16 md:h-16 mb-4 md:mb-6 flex items-center justify-center rounded-full bg-primary/10">
+                  <division.icon className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">
+                <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4 text-foreground">
                   {division.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {division.description}
                 </p>
               </div>
@@ -144,57 +144,57 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="section-padding bg-card">
+      <section className="py-12 md:py-20 bg-card">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <SectionHeading
                 title="Our Mission"
                 subtitle="Driving excellence in everything we do"
               />
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 {missionPoints.map((point, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                    <p className="text-muted-foreground leading-relaxed">
+                  <div key={index} className="flex items-start gap-3 md:gap-4">
+                    <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-primary flex-shrink-0 mt-0.5" />
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                       {point}
                     </p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-background p-8 rounded-lg border border-border">
-              <h3 className="text-2xl font-bold mb-6 text-gold">
+            <div className="bg-background p-4 md:p-8 rounded-lg border border-border">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gold">
                 Why Choose KADI?
               </h3>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-4">
+              <ul className="space-y-3 md:space-y-4">
+                <li className="flex items-start gap-3 md:gap-4">
                   <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
-                  <p className="text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     In-depth understanding of customer needs
                   </p>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-3 md:gap-4">
                   <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
-                  <p className="text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Dedicated and skilled workforce
                   </p>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-3 md:gap-4">
                   <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
-                  <p className="text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Premium quality products at competitive prices
                   </p>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-3 md:gap-4">
                   <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
-                  <p className="text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Steadfast commitment to timely deliveries
                   </p>
                 </li>
-                <li className="flex items-start gap-4">
+                <li className="flex items-start gap-3 md:gap-4">
                   <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0" />
-                  <p className="text-muted-foreground">
+                  <p className="text-sm md:text-base text-muted-foreground">
                     Extensive network of 12 retail outlets across Bahrain
                   </p>
                 </li>
